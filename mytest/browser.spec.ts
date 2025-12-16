@@ -18,8 +18,8 @@ test('login test', async()=>{
     const password1:Locator = await page1.locator('#input-password');
     const loginButton1:Locator = await page1.locator('[value="Login"]');
 
-    await emailId1.fill('pwtest@opencart.com');
-    await password1.fill('playwright@123');
+    await emailId1.fill('sumitbhatt@pw.com');
+    await password1.fill('Test@123');
     await loginButton1.click();
 
     // Browser 2

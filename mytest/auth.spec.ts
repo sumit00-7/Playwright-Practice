@@ -11,7 +11,7 @@ test('login test', async()=>{
     const password = 'admin';
     page.setExtraHTTPHeaders({Authorization : createAuthHeader(userName, password)});
 
-    await page.goto("https://admin:admin@the-internet.herokuapp.com/basic_auth");
+    await page.goto("https://the-internet.herokuapp.com/basic_auth");
 
 
 
