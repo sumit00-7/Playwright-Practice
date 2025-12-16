@@ -15,7 +15,6 @@ test('Locator test', async()=>{
     await lastName.fill("Bhatt")
 
     //2. class name
-
     const logo: Locator = page.locator(".img-responsive")
     const logoExist = await logo.isEnabled()
     console.log(logoExist);
@@ -33,4 +32,22 @@ test('Locator test', async()=>{
     const forgotPwdLinkExist = await header.isEnabled()
     console.log(forgotPwdLinkExist);
 
+    //4. Css Selector
+    const email: Locator = page.locator("css=input#input-email")
+    const telephone: Locator = page.locator("css=input[name='telephone']")
+    const privacyCheckBox: Locator = page.locator("css=input[type='checkbox']")
+
+    await email.fill("sumit@gmail.test")
+    await telephone.fill("9876543210")
+    await privacyCheckBox.click()
+
+    //5. Xpath
+    const password: Locator = page.locator("xpath=//input[@id='input-password']")
+    const search: Locator = page.locator("xpath=//input[@name='search' and @type='text']")
+
+    await password.fill("Test@123")
+    await search.fill("MAC BOOK")
+
+
+    await new Promise(() => {}) // pervent your script from exiting!
 })
