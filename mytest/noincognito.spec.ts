@@ -8,7 +8,7 @@ test('No Icognito test', async()=>{
     const browser:BrowserContext = await chromium.launchPersistentContext('', {headless: false, channel: 'chrome'})
     // const browser:BrowserContext = await firefox.launchPersistentContext('', {headless: false})
 
-    const pages: Page[] = browser.pages() //2
+    const pages: Page[] = browser.pages() // 2 tabs are opened
 
     const page: Page = pages[0]
 
