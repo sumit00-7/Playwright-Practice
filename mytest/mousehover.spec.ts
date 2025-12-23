@@ -11,9 +11,9 @@ test('move to element test', async()=>{
 
     await page.goto("https://www.bigbasket.com/",  {waitUntil: 'domcontentloaded'})
     await page.getByRole('button', { name: 'Shop by Category' }).last().click();
-    await page.getByText('Beverages').hover()
-    await page.getByText('Fruit Juices & Drinks').hover()
-    await page.getByRole('link', {name:'Juices'}).click()
+    await page.getByRole('link', { name: 'Beverages' }).last().hover();
+    await page.getByText('Fruit Juices & Drinks').last().hover()
+    await page.getByRole('link', {name:'Juices'}).last().click()
 
 
     await page.waitForTimeout(5000)
